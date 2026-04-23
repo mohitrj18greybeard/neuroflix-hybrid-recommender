@@ -234,7 +234,16 @@ def load_data():
         data["test"] = pd.read_csv(str(processed / "test_ratings.csv"))
         data["user_stats"] = pd.read_csv(str(processed / "user_stats.csv"))
     except FileNotFoundError:
-        st.error("⚠️ Processed data not found. Run training pipeline first: `python src/train_pipeline.py`")
+        st.warning("⚠️ Processed data not found. This is expected on first run.")
+        if st.button("🚀 Run Initial Setup & Training"):
+            with st.spinner("Training models (this takes ~2 mins)..."):
+                try:
+                    from src.train_pipeline import train_all
+                    train_all()
+                    st.success("✅ Setup complete! Refreshing...")
+                    st.rerun()
+                except Exception as e:
+                    st.error(f"❌ Setup failed: {e}")
         st.stop()
 
     # Load evaluation results
