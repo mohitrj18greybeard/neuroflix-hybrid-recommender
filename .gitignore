@@ -1,0 +1,41 @@
+# NeuroFlix — Hybrid Recommender
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Data (large files)
+data/raw/
+data/processed/*.csv
+!data/processed/.gitkeep
+!data/results/
+
+# Models (large binary files)
+models/*.pkl
+!models/.gitkeep
+
+# Environment
+.env
+venv/
+.venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Logs
+*.log

@@ -1,0 +1,55 @@
+============================================================
+  NEUROFLIX - MODEL EVALUATION SUMMARY
+============================================================
+
+Content-Based (TF-IDF)
+----------------------------------------
+                RMSE: 1.9111
+                 MAE: 1.6644
+        Precision@5: 0.0824
+       Precision@10: 0.0712
+       Precision@20: 0.0583
+           Recall@5: 0.0341
+          Recall@10: 0.0587
+          Recall@20: 0.0923
+             NDCG@5: 0.0756
+            NDCG@10: 0.0812
+            NDCG@20: 0.0934
+         HitRate@10: 0.3800
+           Coverage: 0.0382
+
+Collaborative (SVD)
+----------------------------------------
+                RMSE: 0.9753
+                 MAE: 0.7631
+        Precision@5: 0.1342
+       Precision@10: 0.1156
+       Precision@20: 0.0891
+           Recall@5: 0.0523
+          Recall@10: 0.0912
+          Recall@20: 0.1387
+             NDCG@5: 0.1289
+            NDCG@10: 0.1356
+            NDCG@20: 0.1478
+         HitRate@10: 0.5600
+           Coverage: 0.0426
+
+Hybrid (Weighted a=0.6)
+----------------------------------------
+                RMSE: 1.1396
+                 MAE: 0.9354
+        Precision@5: 0.1486
+       Precision@10: 0.1278
+       Precision@20: 0.0967
+           Recall@5: 0.0612
+          Recall@10: 0.1034
+          Recall@20: 0.1523
+             NDCG@5: 0.1412
+            NDCG@10: 0.1534
+            NDCG@20: 0.1645
+         HitRate@10: 0.6200
+           Coverage: 0.0434
+
+Best Model (by RMSE): Collaborative (SVD) (0.9753)
+Best Model (by NDCG@10): Hybrid (Weighted a=0.6) (0.1534)
+Best Model (by Precision@10): Hybrid (Weighted a=0.6) (0.1278)
