@@ -330,16 +330,15 @@ def main():
         </div>
         """, unsafe_allow_html=True)
         
-        st.warning("⚠️ Processed data not found. This is expected on first run.")
-        if st.button("🚀 Run Initial Setup & Training"):
-            with st.spinner("Training models (this takes ~2 mins)..."):
-                try:
-                    from src.train_pipeline import train_all
-                    train_all()
-                    st.success("✅ Setup complete! Refreshing...")
-                    st.rerun()
-                except Exception as e:
-                    st.error(f"❌ Setup failed: {e}")
+        st.info("🚀 First-time setup: Downloading data & training models (this takes ~2 mins)...")
+        with st.spinner("🧠 Brain in progress..."):
+            try:
+                from src.train_pipeline import train_all
+                train_all()
+                st.success("✅ Setup complete! Refreshing...")
+                st.rerun()
+            except Exception as e:
+                st.error(f"❌ Setup failed: {e}")
         st.stop()
         return
 
