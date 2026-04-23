@@ -227,24 +227,12 @@ def load_data():
     results = PROJECT_ROOT / "data" / "results"
 
     data = {}
-    try:
-        data["movies"] = pd.read_csv(str(processed / "movies_enriched.csv"))
-        data["ratings"] = pd.read_csv(str(processed / "ratings.csv"))
-        data["train"] = pd.read_csv(str(processed / "train_ratings.csv"))
-        data["test"] = pd.read_csv(str(processed / "test_ratings.csv"))
-        data["user_stats"] = pd.read_csv(str(processed / "user_stats.csv"))
-    except FileNotFoundError:
-        st.warning("⚠️ Processed data not found. This is expected on first run.")
-        if st.button("🚀 Run Initial Setup & Training"):
-            with st.spinner("Training models (this takes ~2 mins)..."):
-                try:
-                    from src.train_pipeline import train_all
-                    train_all()
-                    st.success("✅ Setup complete! Refreshing...")
-                    st.rerun()
-                except Exception as e:
-                    st.error(f"❌ Setup failed: {e}")
-        st.stop()
+    # Just raise FileNotFoundError if missing, handle in main
+    data["movies"] = pd.read_csv(str(processed / "movies_enriched.csv"))
+    data["ratings"] = pd.read_csv(str(processed / "ratings.csv"))
+    data["train"] = pd.read_csv(str(processed / "train_ratings.csv"))
+    data["test"] = pd.read_csv(str(processed / "test_ratings.csv"))
+    data["user_stats"] = pd.read_csv(str(processed / "user_stats.csv"))
 
     # Load evaluation results
     try:
@@ -332,7 +320,29 @@ def render_metric(value, label, prefix="", suffix=""):
 #  MAIN APP
 # ══════════════════════════════════════════════════════════════
 def main():
-    data = load_data()
+    try:
+        data = load_data()
+    except FileNotFoundError:
+        st.markdown("""
+        <div class="hero-section">
+            <h1 class="hero-title">🎬 NeuroFlix</h1>
+            <p class="hero-subtitle">Elite Hybrid Movie Recommendation System</p>
+        </div>
+        """, unsafe_allow_html=True)
+        
+        st.warning("⚠️ Processed data not found. This is expected on first run.")
+        if st.button("🚀 Run Initial Setup & Training"):
+            with st.spinner("Training models (this takes ~2 mins)..."):
+                try:
+                    from src.train_pipeline import train_all
+                    train_all()
+                    st.success("✅ Setup complete! Refreshing...")
+                    st.rerun()
+                except Exception as e:
+                    st.error(f"❌ Setup failed: {e}")
+        st.stop()
+        return
+
     engines = load_engines()
     movies = data["movies"]
     ratings = data["ratings"]
