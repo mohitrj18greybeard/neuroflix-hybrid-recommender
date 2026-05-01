@@ -5,7 +5,7 @@
   <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" />
 </p>
 
-<h1 align="center">🎬 NeuroFlix — Hybrid Movie Recommendation System</h1>
+<h1 align="center">🎬 **[NeuroFlix →](https://neuroflix-hybrid-recommender-jb7jarhqd9gg4wnhpte5yu.streamlit.app/)** — Hybrid Movie Recommendation System</h1>
 
 <p align="center">
   <strong>A production-grade hybrid recommendation engine combining Content-Based and Collaborative Filtering</strong><br/>
