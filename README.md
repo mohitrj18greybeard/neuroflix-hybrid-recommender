@@ -169,17 +169,6 @@ Modern streaming platforms like Netflix and Amazon Prime need to solve a critica
 3. **Content-Based provides diversity** but weaker prediction accuracy
 4. **Hybrid fusion successfully combines strengths** — best precision and hit rate
 
-### Dashboard Screenshots
-
-<p align="center">
-  <img src="assets/dashboard_main.png" width="90%" alt="NeuroFlix Dashboard - Recommendations"/>
-  <br/><em>Main Recommendation Dashboard</em>
-</p>
-
-<p align="center">
-  <img src="assets/dashboard_evaluation.png" width="90%" alt="NeuroFlix Dashboard - Model Evaluation"/>
-  <br/><em>Model Evaluation & Comparison</em>
-</p>
 
 ---
 
@@ -317,5 +306,5 @@ This project is licensed under the MIT License — see the [LICENSE](LICENSE) fi
 
 <p align="center">
   <strong>⭐ If you found this project useful, please give it a star!</strong><br/>
-  <em>Built with ❤️ for the ML community</em>
+  <em>Built with ❤️</em>
 </p>
