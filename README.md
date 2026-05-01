@@ -12,13 +12,6 @@
   <em>Built with Python • Powered by SVD Matrix Factorization • Deployed on Streamlit</em>
 </p>
 
-<p align="center">
-  <a href="#-live-demo">Live Demo</a> •
-  <a href="#-features">Features</a> •
-  <a href="#-architecture">Architecture</a> •
-  <a href="#-results">Results</a> •
-  <a href="#-quick-start">Quick Start</a>
-</p>
 
 ---
 
