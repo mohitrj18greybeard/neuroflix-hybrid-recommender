@@ -22,6 +22,11 @@
 
 ---
 
+### Cloud
+The app is live at: **[NeuroFlix →](https://neuroflix-hybrid-recommender-jb7jarhqd9gg4wnhpte5yu.streamlit.app/)**
+
+---
+
 ## 🎯 Problem Statement
 
 Modern streaming platforms like Netflix and Amazon Prime need to solve a critical challenge: **recommending the right content to the right user at the right time.** Traditional single-approach systems suffer from:
@@ -303,7 +308,7 @@ neuroflix-hybrid-recommender/
 
 ## 👤 Author
 
-**Mohit Raj**
+**Mohit**
 
 - GitHub: [@mohitrj18greybeard](https://github.com/mohitrj18greybeard)
 
