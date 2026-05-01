@@ -1,5 +1,3 @@
-# 🧠 [EduPulse AI →](https://student-intelligence-system-99szuhm2s2fs7ovf26pjh7.streamlit.app/) — Student Intelligence & Performance Optimization System
-
 # 🎬 [NeuroFlix →](https://neuroflix-hybrid-recommender-jb7jarhqd9gg4wnhpte5yu.streamlit.app/) — Hybrid Movie Recommendation System
 
 <p align="center">
@@ -21,11 +19,6 @@
   <a href="#-results">Results</a> •
   <a href="#-quick-start">Quick Start</a>
 </p>
-
----
-
-### Cloud
-The app is live at: **[NeuroFlix →](https://neuroflix-hybrid-recommender-jb7jarhqd9gg4wnhpte5yu.streamlit.app/)**
 
 ---
 
